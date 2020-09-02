@@ -1,3 +1,20 @@
-#subtitle {
-    margin-bottom: 1.5rem;
-};
+.container-form {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+    border-color: #C2C2C2;;
+    border-style: solid;
+    padding-bottom: 20px;
+}
+.container-form h2 {
+    padding:10px;
+    color:black;
+    margin-left:0;
+    background-color:#dddddd;
+    font-size:12pt; 
+    width: 100%;
+  }
+.inputs {
+    padding-left: 15px;
+    padding-right: 15px;
+}
