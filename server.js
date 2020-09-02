@@ -13,28 +13,31 @@ var PORT = process.env.PORT || 8080;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+var waiting = [
+    {}
+]
 var patrons = [
     {
-        PatronName:"name",
+        patronName: "name",
         name: "name",
-        phoneNumber: 555-1212,
+        phoneNumber: "555-1212",
         email: "d@gmail.com",
-        uniqueId: them
+        uniqueId: 1
     },
     {
-        PatronName:"name2",
+        patronName: "name2",
         name: "name2",
-        phoneNumber: 555-1213,
+        phoneNumber: "555-1213",
         email: "d2@gmail.com",
-        uniqueId: alsoThem
-      },
-      {
-        PatronName:"name3",
+        uniqueId: 2
+    },
+    {
+        patronName: "name3",
         name: "name3",
-        phoneNumber: 555-1214,
+        phoneNumber: "555 - 1214",
         email: "d3@gmail.com",
-        uniqueId: themToo
-      },
+        uniqueId: 3
+    },
 ]
 
 // Routes
@@ -55,13 +58,16 @@ app.get("/api/patrons", function (req, res) {
     return res.json(patrons);
 });
 
+app.get("/api/waiting", function (req, res) {
+    return res.json(waiting);
+})
 app.get("/api/patrons/:patrons", function (req, res) {
     var chosen = req.params.patrons;
 
     console.log(chosen);
 
     for (var i = 0; i < patrons.length; i++) {
-        if (chosen === patrons[i].routeName) {
+        if (chosen === patrons[i].patronName) {
             return res.json(patrons[i]);
         }
     }
