@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
@@ -16,55 +18,44 @@
 <body>
     <div class="container">
 
-        <div class="container">
 
-            <div class="jumbotron text-center">
-                <h1 class="display-4">Hot Restaurant!</h1>
-                <hr class="my-4">
-        
-                <h2>Make your reservation</h2>
-        
-                <a class="btn btn-primary btn-lg" href="#" role="button">View Tables</a>
-                <a class="btn btn-danger btn-lg" href="#" role="button">Make Reservation</a>
-            </div>
-        
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">First and last name</span>
-                </div>
-                <input type="text" aria-label="First name" class="form-control">
-                <input type="text" aria-label="Last name" class="form-control">
-            </div>
-        
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">Phone Number</span>
-                </div>
-                <input type="text" aria-label="First name" class="form-control">
-                <input type="text" aria-label="Last name" class="form-control">
-            </div>
-        
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">Email</span>
-                </div>
-                <input type="text" aria-label="First name" class="form-control">
-                <input type="text" aria-label="Last name" class="form-control">
-            </div>
-        
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">Unique ID</span>
-                </div>
-                <input type="text" aria-label="First name" class="form-control">
-                <input type="text" aria-label="Last name" class="form-control">
-            </div>
-        
-        
-        
+        <div class="jumbotron text-center">
+            <h1 class="display-4">Hot Restaurant!</h1>
+            <hr class="my-4">
+
+            <h2>Make your reservation</h2>
+
+            <a class="btn btn-primary btn-lg" href="#" role="button">View Tables</a>
+            <button class="btn btn-light btn-lg"><i class="fa fa-home"></i></button>
         </div>
-        <a href="#">Link1</a>
-        <a href="#">Link2</a>
+
+        <div class="container-fluid container-form">
+            <h2>Table Reservation</h2>
+            <div class="inputs">
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Name</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput">
+                  </div>
+                  <div class="form-group">
+                    <label for="formGroupExampleInput2">Phone Number</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2">
+                  </div>
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">Email</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput">
+                  </div>
+                  <div class="form-group">
+                    <label for="formGroupExampleInput2">Unique ID</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2">
+                  </div>
+
+                  <a class="btn btn-primary btn-lg" href="#" role="button">Submit</a>
+            </div>
+
+
+        </div>
+        <a href="#">API Link Tree</a>
+        <a href="#">API Wait List</a>
 
     </div>
     <!-- Optional JavaScript -->
@@ -81,4 +72,3 @@
 </body>
 
 </html>
-
