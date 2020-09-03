@@ -16,21 +16,18 @@ app.use(express.json());
 var waiting = [];
 var patrons = [
     {
-        patronName: "name",
         name: "name",
         phoneNumber: "555-1212",
         email: "d@gmail.com",
         uniqueId: 1
     },
     {
-        patronName: "name2",
         name: "name2",
         phoneNumber: "555-1213",
         email: "d2@gmail.com",
         uniqueId: 2
     },
     {
-        patronName: "name3",
         name: "name3",
         phoneNumber: "555 - 1214",
         email: "d3@gmail.com",
