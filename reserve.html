@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery.js"></script>
 
     <title>Reservations Page</title>
 </head>
@@ -35,22 +36,22 @@
             <div class="inputs">
                 <div class="form-group">
                     <label for="formGroupExampleInput">Name</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput">
+                    <input type="text" class="form-control" id="name">
                 </div>
                 <div class="form-group">
                     <label for="formGroupExampleInput2">Phone Number</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2">
+                    <input type="text" class="form-control" id="phoneNum">
                 </div>
                 <div class="form-group">
                     <label for="formGroupExampleInput">Email</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput">
+                    <input type="text" class="form-control" id="email">
                 </div>
                 <div class="form-group">
                     <label for="formGroupExampleInput2">Unique ID</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2">
+                    <input type="text" class="form-control" id="uId">
                 </div>
 
-                <a class="btn btn-primary btn-lg" href="#" role="button">Submit</a>
+                <a class="btn btn-primary btn-lg" id="add-btn" role="button">Submit</a>
             </div>
 
 
@@ -59,11 +60,25 @@
         <a href="/api/waiting">API Wait List</a>
 
     </div>
+    <script type="text/javascript">
+        $("#add-btn").on("click", function (event) {
+            event.preventDefault();
+            var newPatron = {
+                name: $("#name").val().trim(),
+                phoneNum: $("#phoneNum").val().trim(),
+                email: $("#email").val().trim(),
+                uniqueId: $("#uId").val().trim()
+            };
+
+            $.post("/api/waiting", newPatron)
+                .then(function (data) {
+                    console.log("reserve.html", data);
+                });
+        });
+
+    </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
         crossorigin="anonymous"></script>
