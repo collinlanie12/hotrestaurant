@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Reservations Page</title>
 </head>
 
 <body>
@@ -25,7 +25,8 @@
 
             <h2>Make your reservation</h2>
 
-            <button type="button" class="btn btn-primary btn-lg"><i class="fa fa-calendar" aria-hidden="true"></i> Reservations</button>
+            <button type="button" class="btn btn-primary btn-lg"><i class="fa fa-calendar" aria-hidden="true" href="/tables" role="button" 
+                onclick="window.location.href = '/'"></i> View Tables</button>
             <button class="btn btn-light btn-lg"><i class="fa fa-home"></i></button>
         </div>
     </div>
@@ -48,15 +49,16 @@
                   <div class="form-group">
                     <label for="formGroupExampleInput2"><strong>Unique ID</strong></label>
                     <input type="text" class="form-control" id="formGroupExampleInput2">
-                  </div>
+                </div>
 
-                  <a class="btn btn-primary btn-sm" id ="submit-btn" href="#" role="button">Submit</a>
+                <a class="btn btn-primary btn-lg" href="#" role="button">Submit</a>
             </div>
-        </div>  
-        <footer>
-        <a href="#">API Link Tree</a> |
-        <a href="#">API Wait List</a>
-        </footer>
+
+
+        </div>
+        <a href="/api/patrons">API Link Tree</a>
+        <a href="/api/waiting">API Wait List</a>
+
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
