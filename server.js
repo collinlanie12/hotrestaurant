@@ -13,9 +13,7 @@ var PORT = process.env.PORT || 8080;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-var waiting = [
-    {}
-]
+var waiting = [];
 var patrons = [
     {
         patronName: "name",
@@ -38,7 +36,7 @@ var patrons = [
         email: "d3@gmail.com",
         uniqueId: 3
     },
-]
+];
 
 // Routes
 // =============================================================
